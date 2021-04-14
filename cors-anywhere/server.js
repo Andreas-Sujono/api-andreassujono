@@ -16,6 +16,8 @@ const domain = [
     'andreassujono.ml',
     'andreassujono.online',
     'andreassujono.link',  
+    'api.andreassujono.com', 
+    'www.api.andreassujono.com', 
     'www.andreassujono.com',
 ]
 let whitelistDomain = domain.map(item => `http://${item}`)
