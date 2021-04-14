@@ -19,12 +19,13 @@ const domain = [
     'api.andreassujono.com', 
     'www.api.andreassujono.com', 
     'www.andreassujono.com',
+    ""
 ]
 let whitelistDomain = domain.map(item => `http://${item}`)
 whitelistDomain = [...whitelistDomain, ...domain.map(item => `https://${item}`)]
 
 cors_proxy.createServer({
-    originWhitelist: whitelistDomain, 
+    originWhitelist: [], 
     removeHeaders: ['cookie', 'cookie2']
 }).listen(port, host, function() {
     console.log('Running CORS Anywhere on ' + host + ':' + port);
